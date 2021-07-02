@@ -18,6 +18,15 @@
     "language": "C#"
   },
   {
+    "name": "CleanCode",
+    "description": "Roslyn анализатор кода.",
+    "sourceCodeUrl": {
+      "url": "https://github.com/blowin/BlowinCleanCode",
+      "name": "Github"
+    },
+    "language": "C#"
+  },
+  {
     "name": "LTRemover",
     "description": "Программа для сортировки файлов по папкам",
     "sourceCodeUrl": {
@@ -52,14 +61,5 @@
       "name": "Github"
     },
     "language": "F#, C#"
-  },
-  {
-    "name": "CleanCode",
-    "description": "Roslyn анализатор кода.",
-    "sourceCodeUrl": {
-      "url": "https://github.com/blowin/BlowinCleanCode",
-      "name": "Github"
-    },
-    "language": "C#"
   }
 ]
