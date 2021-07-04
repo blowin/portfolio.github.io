@@ -40,6 +40,15 @@
   {
     "company": "ПГУ",
     "technologies": null,
+    "description": "Магистратура. Математика и компьютерные науки.",
+    "startDate": "2018-07-01T00:00:00",
+    "endDate": "2021-05-28T00:00:00",
+    "isWork": false,
+    "formatWorkRange": "2018 - 2021"
+  },
+  {
+    "company": "ПГУ",
+    "technologies": null,
     "description": "Высшее. Полоцкий государственный университет. Факультет информационных технологий.",
     "startDate": "2014-09-01T00:00:00",
     "endDate": "2018-07-01T00:00:00",
