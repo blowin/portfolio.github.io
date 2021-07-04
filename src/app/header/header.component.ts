@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {LinkButton, LinkButtonService} from '../services/link-button/link-button.service';
+import {LinkButton, LinkButtonService} from '../../services/link-button/link-button.service';
 
 @Component({
   selector: 'app-header',

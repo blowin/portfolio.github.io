@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { HeaderComponent } from './header/header.component';
-import {LinkButtonService} from './services/link-button/link-button.service';
+import {LinkButtonService} from '../services/link-button/link-button.service';
 
 @NgModule({
   declarations: [
