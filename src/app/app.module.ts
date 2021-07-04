@@ -10,6 +10,12 @@ import { HeaderComponent } from './header/header.component';
 import {LinkButtonService} from '../services/link-button/link-button.service';
 import { NavLinksComponent } from './nav-links/nav-links.component';
 import { FooterComponent } from './footer/footer.component';
+import {RouterModule, Routes} from '@angular/router';
+import { HomeComponent } from './page/home/home.component';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent }
+];
 
 @NgModule({
   declarations: [
@@ -18,11 +24,13 @@ import { FooterComponent } from './footer/footer.component';
     TimelineComponent,
     HeaderComponent,
     NavLinksComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [LinkButtonService],
   bootstrap: [AppComponent]
