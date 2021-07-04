@@ -8,13 +8,17 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { HeaderComponent } from './header/header.component';
 import {LinkButtonService} from '../services/link-button/link-button.service';
+import { NavLinksComponent } from './nav-links/nav-links.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectListComponent,
     TimelineComponent,
-    HeaderComponent
+    HeaderComponent,
+    NavLinksComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

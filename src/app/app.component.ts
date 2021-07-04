@@ -16,7 +16,7 @@ export class AppComponent {
   places: Place[];
   projects: Project[];
 
-  constructor(private placeService: WorkPlaceService, private projectService: ProjectService, private linkButtonService: LinkButtonService) {
+  constructor(private placeService: WorkPlaceService, private projectService: ProjectService) {
     placeService.getPlaces().subscribe((data: Place[]) => {
       this.places = data.map((it) => {
         const place = new Place();
@@ -54,9 +54,5 @@ export class AppComponent {
 
     const result = this.places.find((place) => !place.getOptionalEndDate().HasValue);
     return result === undefined ? null : result;
-  }
-
-  getLinkButtons(): LinkButton[] {
-    return this.linkButtonService.getAll();
   }
 }
