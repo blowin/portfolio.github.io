@@ -20,12 +20,11 @@
   position: relative;
 }
 
-.active_color {
-  background-color: #78bdff !important;
+.active-color {
+  background-color: #fddb3a !important;
 }
-
 .previous_color {
-  background-color: #d6619f !important;
+  background-color: rgb(196, 196, 196) !important;
 }
 
 .timeline > li:before,
@@ -99,7 +98,7 @@
   top: 16px;
   left: 50%;
   margin-left: -25px;
-  background-color: #999999;
+  background-color: #fddb3a;
   z-index: 100;
   border-radius: 50%;
 }

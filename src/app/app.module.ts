@@ -12,9 +12,11 @@ import { NavLinksComponent } from './nav-links/nav-links.component';
 import { FooterComponent } from './footer/footer.component';
 import {RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './page/home/home.component';
+import { ProjectComponent } from './page/project/project.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }
+  { path: '', component: HomeComponent },
+  { path: 'project', component: ProjectComponent }
 ];
 
 @NgModule({
@@ -25,12 +27,15 @@ const routes: Routes = [
     HeaderComponent,
     NavLinksComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {
+      anchorScrolling: 'enabled'
+    })
   ],
   providers: [LinkButtonService],
   bootstrap: [AppComponent]

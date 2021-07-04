@@ -12,9 +12,8 @@ import {Link} from '../../data/link';
 })
 export class HomeComponent {
   places: Place[];
-  projects: Project[];
 
-  constructor(private placeService: WorkPlaceService, private projectService: ProjectService) {
+  constructor(private placeService: WorkPlaceService) {
     placeService.getPlaces().subscribe((data: Place[]) => {
       this.places = data.map((it) => {
         const place = new Place();
@@ -25,22 +24,6 @@ export class HomeComponent {
         place.technologies = it.technologies;
         place.startDate = new Date(Date.parse(it.startDate.toString()));
         return place;
-      });
-    });
-
-    projectService.getProjects().subscribe((data) => {
-      this.projects = data.map((it) => {
-        const project = new Project();
-        if (it.sourceCodeUrl != null) {
-          project.sourceCodeUrl = new Link();
-          project.sourceCodeUrl.url = it.sourceCodeUrl.url;
-          project.sourceCodeUrl.name = it.sourceCodeUrl.name;
-        }
-
-        project.description = it.description;
-        project.language = it.language;
-        project.name = it.name;
-        return project;
       });
     });
   }

@@ -1,6 +1,8 @@
 <nav class="navMenu">
-  <a href="#">Home</a>
-  <a href="#">Blog</a>
-  <a href="#">Work</a>
-  <a href="#">About</a>
+  <a *ngFor="let link of links"
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{exact: true}"
+     routerLink="{{link.rout}}">
+    {{link.content}}
+  </a>
 </nav>
