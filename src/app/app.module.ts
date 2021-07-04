@@ -6,18 +6,21 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { HeaderComponent } from './header/header.component';
+import {LinkButtonService} from './services/link-button/link-button.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectListComponent,
-    TimelineComponent
+    TimelineComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [LinkButtonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

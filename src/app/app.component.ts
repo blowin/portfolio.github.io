@@ -5,11 +5,7 @@ import {Place} from './data/place';
 import {Project} from './data/project';
 
 import {Link} from './data/link';
-
-interface LinkButton {
-  iconClass: string;
-  href: string;
-}
+import {LinkButton, LinkButtonService} from './services/link-button/link-button.service';
 
 @Component({
   selector: 'app-root',
@@ -17,18 +13,10 @@ interface LinkButton {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-  linkButtons: LinkButton[] = [
-    { iconClass: 'fab fa-linkedin-in', href: 'https://www.linkedin.com/in/dmitry-sushchevsky/' },
-    { iconClass: 'fab fa-instagram', href: 'https://www.instagram.com/icyicebrrg/' },
-    { iconClass: 'fab fa-github', href: 'https://github.com/blowin' },
-    { iconClass: 'fab fa-telegram', href: 'https://t.me/kolvice/' }
-  ];
-
   places: Place[];
   projects: Project[];
 
-  constructor(private placeService: WorkPlaceService, private projectService: ProjectService) {
+  constructor(private placeService: WorkPlaceService, private projectService: ProjectService, private linkButtonService: LinkButtonService) {
     placeService.getPlaces().subscribe((data: Place[]) => {
       this.places = data.map((it) => {
         const place = new Place();
@@ -66,5 +54,9 @@ export class AppComponent {
 
     const result = this.places.find((place) => !place.getOptionalEndDate().HasValue);
     return result === undefined ? null : result;
+  }
+
+  getLinkButtons(): LinkButton[] {
+    return this.linkButtonService.getAll();
   }
 }
