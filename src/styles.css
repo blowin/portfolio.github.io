@@ -2866,7 +2866,7 @@ body {
 }
 
 .bg-project-card {
-  background-color: #ffffffc7;
+  background-color: rgba(255, 255, 255, 0.78);
 }
 
 .bg-theme-peach-to-purple {
@@ -2974,7 +2974,8 @@ body.at-top .scroll-fade-in {
 }
 
 .card {
-  transition: background-position .4s, color .4s, transform .2s
+  transition: background-position .4s, color .4s, transform .2s;
+  background-color: #c9c9c9;
 }
 
 .i :not(.fs-normal) .hover-text-gradient {
